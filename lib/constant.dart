@@ -10,7 +10,7 @@ const Color errorColor = Color.fromARGB(255, 195, 23, 23);
 const Color warnColor = Color(0xFFFFC36D);
 const Color doneColor = Color(0xFFA5E656);
 
-const server = "http://localhost:8000";
+const server = "pos-backend-api.vercel.app";
 const serverUrl = "$server/api/v1";
 
 const apiImageUsers = "$server/uploads/users";
