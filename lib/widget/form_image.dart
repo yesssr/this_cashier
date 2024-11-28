@@ -66,7 +66,7 @@ class ImagePickerFormField extends FormField<dynamic> {
                       width: 120,
                       url: item is User
                           ? "$apiImageUsers/${item.photo}"
-                          : "$apiImageProducts/${item?.photo}",
+                          : "${item?.photo}",
                       id: "Photo-${item?.id}",
                       image: state.value,
                       customGesture: setImage,

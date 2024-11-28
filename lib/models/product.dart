@@ -1,6 +1,6 @@
 class Product {
-  int? id, price, stok;
-  String? name, category, photo;
+  int? id, stok;
+  String? name, category, photo, price;
 
   Product({
     this.id,

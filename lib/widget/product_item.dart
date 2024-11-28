@@ -47,7 +47,7 @@ class _ProductItemState extends State<ProductItem> {
             cart.addCart(
               widget.product.id!,
               widget.product.name!,
-              widget.product.price!.toDouble(),
+              double.parse(widget.product.price ?? "0"),
               widget.product.stok!,
               widget.product.photo!,
             );
@@ -92,7 +92,7 @@ class _ProductItemState extends State<ProductItem> {
                           image: DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
-                              "$apiImageProducts/${widget.product.photo}",
+                              "${widget.product.photo}",
                             ),
                           ),
                           borderRadius: const BorderRadius.vertical(
@@ -145,7 +145,7 @@ class _ProductItemState extends State<ProductItem> {
                             Flexible(
                               flex: 3,
                               child: Text(
-                                "Rp. ${Utils.priceFormatter(widget.product.price)}",
+                                "Rp. ${Utils.priceFormatter(double.tryParse(widget.product.price?? "0"))}",
                                 style: labelLargeMed.copyWith(
                                   fontSize: 12,
                                   color: Colors.black,

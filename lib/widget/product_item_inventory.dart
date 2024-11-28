@@ -99,7 +99,7 @@ class _ProductItemInventoryState extends State<ProductItemInventory> {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => SeeDetailImage(
-                      url: "$apiImageProducts/${widget.product.photo}",
+                      url: "${widget.product.photo}",
                       id: "${widget.product.id}",
                     ),
                   ),
@@ -111,7 +111,7 @@ class _ProductItemInventoryState extends State<ProductItemInventory> {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
-                        "$apiImageProducts/${widget.product.photo}",
+                        "${widget.product.photo}",
                       ),
                     ),
                     borderRadius: const BorderRadius.horizontal(
@@ -159,7 +159,7 @@ class _ProductItemInventoryState extends State<ProductItemInventory> {
                                 ),
                               ),
                               Text(
-                                "Rp. ${Utils.priceFormatter(widget.product.price)}",
+                                "Rp. ${Utils.priceFormatter(double.tryParse(widget.product.price?? "0"))}",
                                 style: labelLargeMed.copyWith(
                                   fontSize: 12,
                                   color: Colors.black,

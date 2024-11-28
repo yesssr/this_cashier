@@ -10,11 +10,11 @@ const Color errorColor = Color.fromARGB(255, 195, 23, 23);
 const Color warnColor = Color(0xFFFFC36D);
 const Color doneColor = Color(0xFFA5E656);
 
-const server = "pos-backend-api.vercel.app";
-const serverUrl = "$server/api/v1";
+const String server = "https://pos-backend-api.vercel.app";
+const String serverUrl = "$server/api/v1";
+const String apiImageUsers = "$server/uploads/users";
+// const String apiImageProducts = "$server/uploads/products";
 
-const apiImageUsers = "$server/uploads/users";
-const apiImageProducts = "$server/uploads/products";
 
 const BoxConstraints fixedMobileSize = BoxConstraints(maxWidth: 312);
 

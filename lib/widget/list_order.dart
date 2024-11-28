@@ -151,7 +151,7 @@ class _ProductCartItemState extends State<ProductCartItem> {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
-                        "$apiImageProducts/${widget.item.photo}",
+                        widget.item.photo,
                       ),
                     ),
                     borderRadius: BorderRadius.circular(8),

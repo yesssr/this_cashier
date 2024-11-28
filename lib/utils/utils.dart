@@ -99,7 +99,7 @@ class Utils {
   static Future<SharedPreferences> getPreferences() async =>
       await SharedPreferences.getInstance();
 
-  static priceFormatter(dynamic price) {
+  static priceFormatter(double? price) {
     final formatter = NumberFormat('#,##0', 'id_ID');
     return formatter.format(price);
   }
